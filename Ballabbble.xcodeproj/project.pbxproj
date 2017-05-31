@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333BF1443832CA1D150D33A1 /* Pods_Ballabbble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748E620FCA833CD71D06457E /* Pods_Ballabbble.framework */; };
 		8D37841E1EDC9AF400B2006A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37841D1EDC9AF400B2006A /* AppDelegate.swift */; };
 		8D3784201EDC9AF400B2006A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37841F1EDC9AF400B2006A /* ViewController.swift */; };
 		8D3784231EDC9AF400B2006A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784211EDC9AF400B2006A /* Main.storyboard */; };
 		8D3784251EDC9AF400B2006A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784241EDC9AF400B2006A /* Assets.xcassets */; };
 		8D3784281EDC9AF400B2006A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784261EDC9AF400B2006A /* LaunchScreen.storyboard */; };
 		8D3784331EDC9AF400B2006A /* BallabbbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3784321EDC9AF400B2006A /* BallabbbleTests.swift */; };
+		B995B748CEA2D87109403327 /* Pods_BallabbbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D262430FAAFE43EE7600346C /* Pods_BallabbbleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B7F9D8AFF22948265AD4FA8 /* Pods-Ballabbble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ballabbble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble.debug.xcconfig"; sourceTree = "<group>"; };
+		6007F9DEB4A853A3BB463B28 /* Pods-Ballabbble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ballabbble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble.release.xcconfig"; sourceTree = "<group>"; };
+		748E620FCA833CD71D06457E /* Pods_Ballabbble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ballabbble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D37841A1EDC9AF400B2006A /* Ballabbble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ballabbble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D37841D1EDC9AF400B2006A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D37841F1EDC9AF400B2006A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		8D37842E1EDC9AF400B2006A /* BallabbbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BallabbbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3784321EDC9AF400B2006A /* BallabbbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallabbbleTests.swift; sourceTree = "<group>"; };
 		8D3784341EDC9AF400B2006A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96923C84000E1190E49A31AB /* Pods-BallabbbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BallabbbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BallabbbleTests/Pods-BallabbbleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D262430FAAFE43EE7600346C /* Pods_BallabbbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BallabbbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC01AE3182F533789F38A2BB /* Pods-BallabbbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BallabbbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BallabbbleTests/Pods-BallabbbleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333BF1443832CA1D150D33A1 /* Pods_Ballabbble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B995B748CEA2D87109403327 /* Pods_BallabbbleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D84A28452E0F793FEEE8468 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				748E620FCA833CD71D06457E /* Pods_Ballabbble.framework */,
+				D262430FAAFE43EE7600346C /* Pods_BallabbbleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CA646B9D449A6B27A983441 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B7F9D8AFF22948265AD4FA8 /* Pods-Ballabbble.debug.xcconfig */,
+				6007F9DEB4A853A3BB463B28 /* Pods-Ballabbble.release.xcconfig */,
+				96923C84000E1190E49A31AB /* Pods-BallabbbleTests.debug.xcconfig */,
+				EC01AE3182F533789F38A2BB /* Pods-BallabbbleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8D3784111EDC9AF400B2006A = {
 			isa = PBXGroup;
 			children = (
 				8D37841C1EDC9AF400B2006A /* Ballabbble */,
 				8D3784311EDC9AF400B2006A /* BallabbbleTests */,
 				8D37841B1EDC9AF400B2006A /* Products */,
+				6CA646B9D449A6B27A983441 /* Pods */,
+				1D84A28452E0F793FEEE8468 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D3784371EDC9AF500B2006A /* Build configuration list for PBXNativeTarget "Ballabbble" */;
 			buildPhases = (
+				8229EE705E840B2C60CF3491 /* [CP] Check Pods Manifest.lock */,
 				8D3784161EDC9AF400B2006A /* Sources */,
 				8D3784171EDC9AF400B2006A /* Frameworks */,
 				8D3784181EDC9AF400B2006A /* Resources */,
+				7421EB65088FF0A53761CD32 /* [CP] Embed Pods Frameworks */,
+				37A9636B335C21E0A31F0CA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D37843A1EDC9AF500B2006A /* Build configuration list for PBXNativeTarget "BallabbbleTests" */;
 			buildPhases = (
+				523CCC18B7B0C24723736AE0 /* [CP] Check Pods Manifest.lock */,
 				8D37842A1EDC9AF400B2006A /* Sources */,
 				8D37842B1EDC9AF400B2006A /* Frameworks */,
 				8D37842C1EDC9AF400B2006A /* Resources */,
+				AEC36F51274745682B694407 /* [CP] Embed Pods Frameworks */,
+				3EAB3D5E60FC52AB3F504B0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +233,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37A9636B335C21E0A31F0CA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EAB3D5E60FC52AB3F504B0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BallabbbleTests/Pods-BallabbbleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		523CCC18B7B0C24723736AE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7421EB65088FF0A53761CD32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8229EE705E840B2C60CF3491 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEC36F51274745682B694407 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BallabbbleTests/Pods-BallabbbleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D3784161EDC9AF400B2006A /* Sources */ = {
@@ -339,6 +470,7 @@
 		};
 		8D3784381EDC9AF500B2006A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7F9D8AFF22948265AD4FA8 /* Pods-Ballabbble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7J9NCU659T;
@@ -352,6 +484,7 @@
 		};
 		8D3784391EDC9AF500B2006A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6007F9DEB4A853A3BB463B28 /* Pods-Ballabbble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7J9NCU659T;
@@ -365,8 +498,8 @@
 		};
 		8D37843B1EDC9AF500B2006A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96923C84000E1190E49A31AB /* Pods-BallabbbleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 7J9NCU659T;
 				INFOPLIST_FILE = BallabbbleTests/Info.plist;
@@ -380,8 +513,8 @@
 		};
 		8D37843C1EDC9AF500B2006A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC01AE3182F533789F38A2BB /* Pods-BallabbbleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 7J9NCU659T;
 				INFOPLIST_FILE = BallabbbleTests/Info.plist;
@@ -412,6 +545,7 @@
 				8D3784391EDC9AF500B2006A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D37843A1EDC9AF500B2006A /* Build configuration list for PBXNativeTarget "BallabbbleTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +554,7 @@
 				8D37843C1EDC9AF500B2006A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
