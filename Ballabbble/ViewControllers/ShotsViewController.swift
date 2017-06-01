@@ -14,22 +14,28 @@ class ShotsViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
 
     // MARK: - Properties
+    var viewModel: ShotsViewModel!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel = ShotsViewModel()
 
+        viewModel.load()
+
+        collectionView.reloadData()
     }
 }
 
 extension ShotsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return viewModel.shots.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ShotCell = collectionView.dequeueReusableCell(for: indexPath)
+//        cell.configure(with: viewModel.shots[indexPath.row])
         return cell
     }
 }

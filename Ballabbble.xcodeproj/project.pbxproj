@@ -21,13 +21,16 @@
 		371C7C751EE01E880027C37E /* ShotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371C7C731EE01E880027C37E /* ShotCell.xib */; };
 		371C7C771EE01EB50027C37E /* ShotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C761EE01EB50027C37E /* ShotsViewModel.swift */; };
 		371C7C7A1EE0243E0027C37E /* ShotsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C791EE0243E0027C37E /* ShotsViewModelSpec.swift */; };
+		371C7C7C1EE02C9A0027C37E /* Moya+Marshal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C7B1EE02C9A0027C37E /* Moya+Marshal.swift */; };
+		371C7C7F1EE033CE0027C37E /* shots.json in Resources */ = {isa = PBXBuildFile; fileRef = 371C7C7E1EE033CE0027C37E /* shots.json */; };
+		371C7C811EE034800027C37E /* MoyaProvider+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C801EE034800027C37E /* MoyaProvider+Helpers.swift */; };
+		371C7C831EE040960027C37E /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C821EE040960027C37E /* Providers.swift */; };
 		37D699971EDEF5BB005AE0D8 /* Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D699961EDEF5BB005AE0D8 /* Dribbble.swift */; };
 		37D6999A1EDFF68F005AE0D8 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D699991EDFF68F005AE0D8 /* Shot.swift */; };
 		8D37841E1EDC9AF400B2006A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37841D1EDC9AF400B2006A /* AppDelegate.swift */; };
 		8D3784231EDC9AF400B2006A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784211EDC9AF400B2006A /* Main.storyboard */; };
 		8D3784251EDC9AF400B2006A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784241EDC9AF400B2006A /* Assets.xcassets */; };
 		8D3784281EDC9AF400B2006A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784261EDC9AF400B2006A /* LaunchScreen.storyboard */; };
-		8D3784331EDC9AF400B2006A /* BallabbbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3784321EDC9AF400B2006A /* BallabbbleTests.swift */; };
 		B995B748CEA2D87109403327 /* Pods_BallabbbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D262430FAAFE43EE7600346C /* Pods_BallabbbleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +56,12 @@
 		371C7C691EE013D30027C37E /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		371C7C721EE01E880027C37E /* ShotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCell.swift; sourceTree = "<group>"; };
 		371C7C731EE01E880027C37E /* ShotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotCell.xib; sourceTree = "<group>"; };
-		371C7C761EE01EB50027C37E /* ShotsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotsViewModel.swift; path = Ballabbble/ShotsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		371C7C761EE01EB50027C37E /* ShotsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsViewModel.swift; sourceTree = "<group>"; };
 		371C7C791EE0243E0027C37E /* ShotsViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsViewModelSpec.swift; sourceTree = "<group>"; };
+		371C7C7B1EE02C9A0027C37E /* Moya+Marshal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Moya+Marshal.swift"; sourceTree = "<group>"; };
+		371C7C7E1EE033CE0027C37E /* shots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shots.json; sourceTree = "<group>"; };
+		371C7C801EE034800027C37E /* MoyaProvider+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Helpers.swift"; sourceTree = "<group>"; };
+		371C7C821EE040960027C37E /* Providers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
 		37D699961EDEF5BB005AE0D8 /* Dribbble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dribbble.swift; sourceTree = "<group>"; };
 		37D699991EDFF68F005AE0D8 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		4B7F9D8AFF22948265AD4FA8 /* Pods-Ballabbble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ballabbble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +74,6 @@
 		8D3784271EDC9AF400B2006A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D3784291EDC9AF400B2006A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D37842E1EDC9AF400B2006A /* BallabbbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BallabbbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D3784321EDC9AF400B2006A /* BallabbbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallabbbleTests.swift; sourceTree = "<group>"; };
 		8D3784341EDC9AF400B2006A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96923C84000E1190E49A31AB /* Pods-BallabbbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BallabbbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BallabbbleTests/Pods-BallabbbleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D262430FAAFE43EE7600346C /* Pods_BallabbbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BallabbbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				371C7C641EE013C10027C37E /* ReusableViews */,
+				371C7C7B1EE02C9A0027C37E /* Moya+Marshal.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,12 +160,23 @@
 			children = (
 				371C7C791EE0243E0027C37E /* ShotsViewModelSpec.swift */,
 			);
-			name = ViewModels;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		371C7C7D1EE033880027C37E /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				371C7C7E1EE033CE0027C37E /* shots.json */,
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 		37D699951EDEF5A4005AE0D8 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				371C7C821EE040960027C37E /* Providers.swift */,
+				371C7C801EE034800027C37E /* MoyaProvider+Helpers.swift */,
+				371C7C7D1EE033880027C37E /* SampleData */,
 				37D699961EDEF5BB005AE0D8 /* Dribbble.swift */,
 			);
 			path = Providers;
@@ -228,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				371C7C781EE024330027C37E /* ViewModels */,
-				8D3784321EDC9AF400B2006A /* BallabbbleTests.swift */,
 				8D3784341EDC9AF400B2006A /* Info.plist */,
 			);
 			path = BallabbbleTests;
@@ -326,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371C7C7F1EE033CE0027C37E /* shots.json in Resources */,
 				8D3784281EDC9AF400B2006A /* LaunchScreen.storyboard in Resources */,
 				8D3784251EDC9AF400B2006A /* Assets.xcassets in Resources */,
 				8D3784231EDC9AF400B2006A /* Main.storyboard in Resources */,
@@ -458,10 +476,13 @@
 				371C7C741EE01E880027C37E /* ShotCell.swift in Sources */,
 				371C7C6C1EE013D30027C37E /* UICollectionViewExtensions.swift in Sources */,
 				371C7C6B1EE013D30027C37E /* UICollectionViewElementKind.swift in Sources */,
+				371C7C811EE034800027C37E /* MoyaProvider+Helpers.swift in Sources */,
 				371C7C6E1EE013D30027C37E /* UITableViewExtensions.swift in Sources */,
+				371C7C831EE040960027C37E /* Providers.swift in Sources */,
 				371C7C5C1EE00DD10027C37E /* Team.swift in Sources */,
 				371C7C5A1EE00CDF0027C37E /* Marshal+Extensions.swift in Sources */,
 				37D699971EDEF5BB005AE0D8 /* Dribbble.swift in Sources */,
+				371C7C7C1EE02C9A0027C37E /* Moya+Marshal.swift in Sources */,
 				371C7C6D1EE013D30027C37E /* UIStoryboardExtensions.swift in Sources */,
 				371C7C621EE011640027C37E /* ShotsViewController.swift in Sources */,
 				8D37841E1EDC9AF400B2006A /* AppDelegate.swift in Sources */,
@@ -475,7 +496,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D3784331EDC9AF400B2006A /* BallabbbleTests.swift in Sources */,
 				371C7C7A1EE0243E0027C37E /* ShotsViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +576,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

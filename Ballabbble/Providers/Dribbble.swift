@@ -11,13 +11,12 @@ import Moya
 
 enum Dribbble {
     case
-    shots(type: ShotType),
+    shots(type: ShotType?),
     shot(id: Int)
 }
 
 enum ShotType: String {
     case
-    all,
     animated,
     attachments,
     debuts,
@@ -49,11 +48,9 @@ extension Dribbble: TargetType {
     var parameters: [String: Any]? {
         switch self {
         case .shots(let type):
-            if type == .all {
-                return nil
-            } else {
-                return ["list": type]
-            }
+            var params = [String: Any]()
+            params["list"] = type
+            return params
         case .shot:
             return nil
         }
@@ -69,7 +66,7 @@ extension Dribbble: TargetType {
     var sampleData: Data {
         switch self {
         case .shots:
-            return Data()
+            return Data(fileName: "shots")
         case .shot:
             return Data()
         }
@@ -81,24 +78,4 @@ extension Dribbble: TargetType {
             return .request
         }
     }
-}
-// MARK: - Helpers
-private extension String {
-    var urlEscaped: String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-
-    var utf8Encoded: Data {
-        return self.data(using: .utf8)!
-    }
-}
-
-public func url(route: TargetType) -> String {
-    return route.baseURL.appendingPathComponent(route.path).absoluteString
-}
-
-let endpointClosure = { (target: Dribbble) -> Endpoint<Dribbble> in
-    return Endpoint<Dribbble>(url: url(route: target), sampleResponseClosure: {
-        .networkResponse(200, target.sampleData)
-    }, method: target.method, parameters: target.parameters)
 }

@@ -30,6 +30,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5c5-Jj-9ka"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mjl-O1-mI0"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,6 +44,9 @@
                             <constraint firstItem="7dq-8A-Lky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x5s-a0-MS8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="7dq-8A-Lky" id="7A5-Cw-SOK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
