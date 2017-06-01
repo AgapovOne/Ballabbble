@@ -1,6 +1,0 @@
-framework module Pods_Ballabbble {
-  umbrella header "Pods-Ballabbble-umbrella.h"
-
-  export *
-  module * { export * }
-}
