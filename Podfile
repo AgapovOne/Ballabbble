@@ -5,7 +5,7 @@ target 'Ballabbble' do
 
     pod 'Alamofire'
     pod 'Moya/RxSwift'
-    pod 'Marshal'
+    pod 'Moya-Marshal/RxSwift'
 
     pod 'Kingfisher'
 
