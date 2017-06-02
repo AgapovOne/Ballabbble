@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShotCell: UICollectionViewCell {
+    // MARK: - UI Outlets
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var shotImageView: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - Public interface
+    func configure(with shot: Shot) {
+        titleLabel.text = shot.title
+        descriptionLabel.text = shot.description
+
+        shotImageView.kf.setImage(with: shot.image.hidpi ?? shot.image.normal)
     }
-
 }
