@@ -20,8 +20,7 @@ class ShotsViewModelSpec: QuickSpec {
             var provider: RxMoyaProvider<Dribbble>!
 
             beforeEach {
-                provider = RxMoyaProvider(endpointClosure: ShotsViewModelSpec.fakeEndpointsClosure,
-                                          stubClosure: MoyaProvider<Dribbble>.immediatelyStub)
+                provider = RxMoyaProvider(stubClosure: MoyaProvider<Dribbble>.immediatelyStub)
                 viewModel = ShotsViewModel(provider: provider)
             }
 
@@ -39,13 +38,5 @@ class ShotsViewModelSpec: QuickSpec {
                 }
             }
         }
-    }
-
-    // MARK: - Helpers
-    static let fakeEndpointsClosure = { (target: Dribbble) -> Endpoint<Dribbble> in
-        return Endpoint<Dribbble>(url: target.baseURL.appendingPathComponent(target.path).absoluteString,
-                                  sampleResponseClosure: { .networkResponse(200, target.sampleData) },
-                                  method: target.method,
-                                  parameters: target.parameters)
     }
 }
