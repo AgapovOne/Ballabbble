@@ -25,6 +25,8 @@ struct Shot: Unmarshaling {
     var title: String
     var description: String // Text with html tags
 
+    var image: Image
+
     var width: Int
     var height: Int
 
@@ -53,6 +55,9 @@ struct Shot: Unmarshaling {
         id = try object.value(for: "id")
         title = try object.value(for: "title")
         description = try object.value(for: "description")
+
+        image = try object.value(for: "image")
+
         width = try object.value(for: "width")
         height = try object.value(for: "height")
 
