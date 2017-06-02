@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ShotsViewController: UIViewController {
 
@@ -14,6 +16,8 @@ class ShotsViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
 
     // MARK: - Properties
+    private let disposeBag = DisposeBag()
+
     var viewModel: ShotsViewModel!
 
     // MARK: - Lifecycle
@@ -22,20 +26,15 @@ class ShotsViewController: UIViewController {
 
         viewModel = ShotsViewModel()
 
-        viewModel.load()
-
-        collectionView.reloadData()
-    }
-}
-
-extension ShotsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.shots.count
+        setupCollectionView()
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ShotCell = collectionView.dequeueReusableCell(for: indexPath)
-//        cell.configure(with: viewModel.shots[indexPath.row])
-        return cell
+    private func setupCollectionView() {
+
+        viewModel.provideShots()
+            .drive(collectionView.rx.items(cellIdentifier: String(describing:ShotCell.self),
+                                        cellType: ShotCell.self)) { (_, model, cell) in
+                cell.configure(with: model)
+            }.disposed(by: disposeBag)
     }
 }

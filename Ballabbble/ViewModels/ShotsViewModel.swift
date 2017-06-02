@@ -28,22 +28,11 @@ class ShotsViewModel {
     }
 
     // MARK: - Public interface
-    var shots = [Shot]() //Driver<[Shot]>.just([])
 
-    func load() {
-        provider.request(.shots(type: nil))
+    func provideShots() -> Driver<[Shot]> {
+        return provider.request(.shots(type: nil))
             .filterSuccessfulStatusCodes()
             .mapArray(of: Shot.self)
-            .asSingle()
-            .subscribe { (event) in
-                switch event {
-                case .error(let error):
-                    print("error \(error.localizedDescription)")
-                    self.shots = []
-                case .success(let shots):
-                    self.shots = shots
-//                    self.shots.drive(.next(shots))
-                }
-            }.disposed(by: disposeBag)
+            .asDriver(onErrorJustReturn: [])
     }
 }
