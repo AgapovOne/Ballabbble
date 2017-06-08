@@ -9,6 +9,21 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
+
+// MARK: - Declarations
+fileprivate struct SectionOfShots {
+    var items: [Item]
+}
+
+extension SectionOfShots: SectionModelType {
+    typealias Item = Shot
+
+    init(original: SectionOfShots, items: [Item]) {
+        self = original
+        self.items = items
+    }
+}
 
 class ShotsViewController: UIViewController {
 
@@ -30,11 +45,22 @@ class ShotsViewController: UIViewController {
     }
 
     private func setupCollectionView() {
+        let dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfShots>()
+
+        dataSource.configureCell = { (dataSource, collectionView, indexPath, item) in
+            let cell: ShotCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.configure(with: item)
+            return cell
+        }
 
         viewModel.provideShots()
-            .drive(collectionView.rx.items(cellIdentifier: String(describing:ShotCell.self),
-                                        cellType: ShotCell.self)) { (_, model, cell) in
-                cell.configure(with: model)
-            }.disposed(by: disposeBag)
+            .map({ SectionOfShots(items: $0) })
+            .bind(to: collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+//        viewModel.provideShots()
+//            .map({ SectionOfShots(items: $0) })
+//            .drive(collectionView.rx.items(dataSource: dataSource))
+//            .disposed(by: disposeBag)
     }
 }
