@@ -11,6 +11,7 @@ target 'Ballabbble' do
 
 	pod 'RxSwift'
 	pod 'RxCocoa'
+	pod 'RxDataSources'
 
   	target 'BallabbbleTests' do
     	inherit! :search_paths
