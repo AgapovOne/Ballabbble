@@ -53,10 +53,10 @@ class ShotsViewController: UIViewController {
             return cell
         }
 
-        viewModel.provideShots()
-            .map({ SectionOfShots(items: $0) })
-            .bind(to: collectionView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
+//        viewModel.provideShots()
+//            .map({ SectionOfShots(items: $0) })
+//            .bind(to: collectionView.rx.items(dataSource: dataSource))
+//            .disposed(by: disposeBag)
 
 //        viewModel.provideShots()
 //            .map({ SectionOfShots(items: $0) })
