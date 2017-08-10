@@ -27,6 +27,7 @@
 		371C7C831EE040960027C37E /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C821EE040960027C37E /* Providers.swift */; };
 		37D699971EDEF5BB005AE0D8 /* Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D699961EDEF5BB005AE0D8 /* Dribbble.swift */; };
 		37D6999A1EDFF68F005AE0D8 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D699991EDFF68F005AE0D8 /* Shot.swift */; };
+		37EBDF9A1F3C6F5100871ADB /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBDF991F3C6F5100871ADB /* AuthProvider.swift */; };
 		8D37841E1EDC9AF400B2006A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37841D1EDC9AF400B2006A /* AppDelegate.swift */; };
 		8D3784231EDC9AF400B2006A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784211EDC9AF400B2006A /* Main.storyboard */; };
 		8D3784251EDC9AF400B2006A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784241EDC9AF400B2006A /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		371C7C821EE040960027C37E /* Providers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
 		37D699961EDEF5BB005AE0D8 /* Dribbble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dribbble.swift; sourceTree = "<group>"; };
 		37D699991EDFF68F005AE0D8 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		37EBDF991F3C6F5100871ADB /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		4B7F9D8AFF22948265AD4FA8 /* Pods-Ballabbble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ballabbble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble.debug.xcconfig"; sourceTree = "<group>"; };
 		6007F9DEB4A853A3BB463B28 /* Pods-Ballabbble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ballabbble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble.release.xcconfig"; sourceTree = "<group>"; };
 		748E620FCA833CD71D06457E /* Pods_Ballabbble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ballabbble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				371C7C801EE034800027C37E /* MoyaProvider+Helpers.swift */,
 				371C7C7D1EE033880027C37E /* SampleData */,
 				37D699961EDEF5BB005AE0D8 /* Dribbble.swift */,
+				37EBDF991F3C6F5100871ADB /* AuthProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				371C7C6B1EE013D30027C37E /* UICollectionViewElementKind.swift in Sources */,
 				371C7C811EE034800027C37E /* MoyaProvider+Helpers.swift in Sources */,
 				371C7C6E1EE013D30027C37E /* UITableViewExtensions.swift in Sources */,
+				37EBDF9A1F3C6F5100871ADB /* AuthProvider.swift in Sources */,
 				371C7C831EE040960027C37E /* Providers.swift in Sources */,
 				371C7C5C1EE00DD10027C37E /* Team.swift in Sources */,
 				371C7C5A1EE00CDF0027C37E /* Marshal+Extensions.swift in Sources */,
