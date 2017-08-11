@@ -93,7 +93,7 @@ public class AuthProvider<Target>: MoyaProvider<Target> where Target: TargetType
 
     // Reauthentication state to manage privately
     private var isReauthenticationInProgress: Bool = false
-    private var requestsToRetryStack = [(Target, Completion)]()
+    private var requestsToRetryQueue = [(Target, Completion)]()
 
     init(authenticationClosure: @escaping AuthenticationClosure,
          expiredTokenCheckClosure: @escaping ExpiredTokenClosure,
@@ -132,13 +132,15 @@ public class AuthProvider<Target>: MoyaProvider<Target> where Target: TargetType
 
                     // If reauthenticating, should be added to stack
                     if self.isReauthenticationInProgress {
-                        self.requestsToRetryStack.append((target, completion))
+                        self.requestsToRetryQueue.append((target, completion))
                     } else {
                         self.isReauthenticationInProgress = true
                         self.authenticationClosure {
                             self.isReauthenticationInProgress = false
-                            self.requestsToRetryStack.forEach { _ = self.request($0.0, completion: $0.1) }
-                            _ = self._request(target, isSecondTryAfterAuth: true, completion: completion)
+                            _ = self._request(target, isSecondTryAfterAuth: true) { result in
+                                completion(result)
+                                self.requestsToRetryQueue.forEach { _ = self.request($0.0, completion: $0.1) }
+                            }
                         }
                     }
                 } else {
