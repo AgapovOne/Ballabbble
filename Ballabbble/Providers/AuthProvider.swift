@@ -75,7 +75,8 @@ public class RxAuthProvider<Target>: RxMoyaProvider<Target> where Target: Target
                             self._request(token, isSecondTryAfterAuth: true)
                                 .subscribe { event in
                                     observer.on(event)
-                                }.addDisposableTo(self.disposeBag)
+                                }
+                                .addDisposableTo(self.disposeBag)
                         }
                         return Disposables.create()
                     }

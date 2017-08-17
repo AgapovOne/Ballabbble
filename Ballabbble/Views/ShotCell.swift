@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class ShotCell: UICollectionViewCell {
+class ShotCell: UICollectionViewCell, NibLoadableView {
     // MARK: - UI Outlets
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!

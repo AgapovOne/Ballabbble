@@ -10,6 +10,14 @@ import Moya
 
 class Provider {
     static let sharedDribbble: RxMoyaProvider<Dribbble> = {
+        let TESTING = true
+
+        guard !TESTING else {
+            print("TEST MODE API (with logger & stubs)")
+            return RxMoyaProvider<Dribbble>(stubClosure: MoyaProvider<Dribbble>.immediatelyStub,
+                                            plugins: [NetworkLoggerPlugin()])
+        }
+
         #if DEBUG
             print("DEBUG MODE API (with logger)")
             return RxMoyaProvider<Dribbble>(plugins: [NetworkLoggerPlugin()])

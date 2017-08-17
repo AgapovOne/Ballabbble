@@ -7,60 +7,86 @@
 //
 
 import UIKit
+import Cartography
 import RxSwift
 import RxCocoa
 import RxDataSources
 
-// MARK: - Declarations
-fileprivate struct SectionOfShots {
-    var items: [Item]
-}
-
-extension SectionOfShots: SectionModelType {
-    typealias Item = Shot
-
-    init(original: SectionOfShots, items: [Item]) {
-        self = original
-        self.items = items
-    }
-}
-
 class ShotsViewController: UIViewController {
 
+    // MARK: - Declarations
+    private enum Constant {
+        fileprivate enum Size {
+            static let margin: CGFloat = 16.0
+        }
+    }
+
     // MARK: - UI Outlets
-    @IBOutlet private var collectionView: UICollectionView!
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: self.view.frame.width / 2 - (Constant.Size.margin), height: 300)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: Constant.Size.margin, bottom: 0, right: Constant.Size.margin)
+        layout.minimumInteritemSpacing = Constant.Size.margin
+        layout.minimumLineSpacing = Constant.Size.margin
+        let c = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        c.backgroundColor = .white
+        return c
+    }()
 
     // MARK: - Properties
     private let disposeBag = DisposeBag()
 
-    var viewModel: ShotsViewModel!
+    private let viewModel: ShotsViewModel
 
     // MARK: - Lifecycle
+    init(viewModel: ShotsViewModel) {
+        self.viewModel = viewModel
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = ShotsViewModel()
+        setupUI()
 
         setupCollectionView()
     }
 
-    private func setupCollectionView() {
-        let dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfShots>()
+    private func setupUI() {
+        view.backgroundColor = .white
 
-        dataSource.configureCell = { (dataSource, collectionView, indexPath, item) in
+        view.addSubview(collectionView)
+
+        constrain(collectionView) { collection in
+            collection.edges == collection.superview!.edges
+        }
+    }
+
+    private func setupCollectionView() {
+        collectionView.register(ShotCell.self)
+
+        viewModel.dataSource.configureCell = { (dataSource, collectionView, indexPath, item) in
             let cell: ShotCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.configure(with: item)
             return cell
         }
 
-//        viewModel.provideShots()
-//            .map({ SectionOfShots(items: $0) })
-//            .bind(to: collectionView.rx.items(dataSource: dataSource))
+        viewModel.shots
+            .drive(collectionView.rx.items(dataSource: viewModel.dataSource))
+            .disposed(by: disposeBag)
+//            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
 //            .disposed(by: disposeBag)
 
-//        viewModel.provideShots()
-//            .map({ SectionOfShots(items: $0) })
-//            .drive(collectionView.rx.items(dataSource: dataSource))
-//            .disposed(by: disposeBag)
+        collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
     }
+}
+
+extension ShotsViewController: UICollectionViewDelegate {
+    
 }

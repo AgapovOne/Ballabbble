@@ -11,6 +11,21 @@ import Moya
 import Marshal
 import RxSwift
 import RxCocoa
+import RxDataSources
+
+// MARK: - Declarations
+struct SectionOfShots {
+    var items: [Item]
+}
+
+extension SectionOfShots: SectionModelType {
+    typealias Item = Shot
+
+    init(original: SectionOfShots, items: [Item]) {
+        self = original
+        self.items = items
+    }
+}
 
 class ShotsViewModel {
     // MARK: - Private properties
@@ -28,11 +43,15 @@ class ShotsViewModel {
     }
 
     // MARK: - Public interface
-
-    func provideShots() -> Driver<[Shot]> {
-        return provider.request(.shots(type: nil))
+    lazy var shots: Driver<[SectionOfShots]> = {
+        return self.provider.request(.shots(type: nil))
             .filterSuccessfulStatusCodes()
             .mapArray(of: Shot.self)
+            .map({ [SectionOfShots(items: $0)] })
             .asDriver(onErrorJustReturn: [])
-    }
+    }()
+
+    lazy var dataSource: RxCollectionViewSectionedReloadDataSource<SectionOfShots> = {
+        return RxCollectionViewSectionedReloadDataSource<SectionOfShots>()
+    }()
 }
