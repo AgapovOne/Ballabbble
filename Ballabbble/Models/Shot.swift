@@ -56,7 +56,7 @@ struct Shot: Unmarshaling {
         title = try object.value(for: "title")
         description = try object.value(for: "description")
 
-        image = try object.value(for: "image")
+        image = try object.value(for: "images")
 
         width = try object.value(for: "width")
         height = try object.value(for: "height")
