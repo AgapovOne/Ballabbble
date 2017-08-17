@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        openApplication()
+
         return true
+    }
+
+    private func openApplication() {
+
+        let splashViewController = SplashViewController()
+        let navigationController = UINavigationController(rootViewController: splashViewController)
+
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 }

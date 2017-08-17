@@ -25,11 +25,12 @@
 		371C7C7F1EE033CE0027C37E /* shots.json in Resources */ = {isa = PBXBuildFile; fileRef = 371C7C7E1EE033CE0027C37E /* shots.json */; };
 		371C7C811EE034800027C37E /* MoyaProvider+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C801EE034800027C37E /* MoyaProvider+Helpers.swift */; };
 		371C7C831EE040960027C37E /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C7C821EE040960027C37E /* Providers.swift */; };
+		3797A5561F458F2E001A4472 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797A5551F458F2E001A4472 /* SplashViewController.swift */; };
+		3797A5591F459493001A4472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3797A5571F459493001A4472 /* Main.storyboard */; };
 		37D699971EDEF5BB005AE0D8 /* Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D699961EDEF5BB005AE0D8 /* Dribbble.swift */; };
 		37D6999A1EDFF68F005AE0D8 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D699991EDFF68F005AE0D8 /* Shot.swift */; };
 		37EBDF9A1F3C6F5100871ADB /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBDF991F3C6F5100871ADB /* AuthProvider.swift */; };
 		8D37841E1EDC9AF400B2006A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37841D1EDC9AF400B2006A /* AppDelegate.swift */; };
-		8D3784231EDC9AF400B2006A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784211EDC9AF400B2006A /* Main.storyboard */; };
 		8D3784251EDC9AF400B2006A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784241EDC9AF400B2006A /* Assets.xcassets */; };
 		8D3784281EDC9AF400B2006A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3784261EDC9AF400B2006A /* LaunchScreen.storyboard */; };
 		B995B748CEA2D87109403327 /* Pods_BallabbbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D262430FAAFE43EE7600346C /* Pods_BallabbbleTests.framework */; };
@@ -63,6 +64,8 @@
 		371C7C7E1EE033CE0027C37E /* shots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shots.json; sourceTree = "<group>"; };
 		371C7C801EE034800027C37E /* MoyaProvider+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Helpers.swift"; sourceTree = "<group>"; };
 		371C7C821EE040960027C37E /* Providers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
+		3797A5551F458F2E001A4472 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3797A5581F459493001A4472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Ballabbble/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37D699961EDEF5BB005AE0D8 /* Dribbble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dribbble.swift; sourceTree = "<group>"; };
 		37D699991EDFF68F005AE0D8 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		37EBDF991F3C6F5100871ADB /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 		748E620FCA833CD71D06457E /* Pods_Ballabbble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ballabbble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D37841A1EDC9AF400B2006A /* Ballabbble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ballabbble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D37841D1EDC9AF400B2006A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D3784221EDC9AF400B2006A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D3784241EDC9AF400B2006A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D3784271EDC9AF400B2006A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D3784291EDC9AF400B2006A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				371C7C611EE011640027C37E /* ShotsViewController.swift */,
+				3797A5551F458F2E001A4472 /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,7 +243,7 @@
 				8D3784241EDC9AF400B2006A /* Assets.xcassets */,
 				8D3784291EDC9AF400B2006A /* Info.plist */,
 				8D3784261EDC9AF400B2006A /* LaunchScreen.storyboard */,
-				8D3784211EDC9AF400B2006A /* Main.storyboard */,
+				3797A5571F459493001A4472 /* Main.storyboard */,
 			);
 			path = Ballabbble;
 			sourceTree = "<group>";
@@ -347,9 +350,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				371C7C7F1EE033CE0027C37E /* shots.json in Resources */,
+				3797A5591F459493001A4472 /* Main.storyboard in Resources */,
 				8D3784281EDC9AF400B2006A /* LaunchScreen.storyboard in Resources */,
 				8D3784251EDC9AF400B2006A /* Assets.xcassets in Resources */,
-				8D3784231EDC9AF400B2006A /* Main.storyboard in Resources */,
 				371C7C751EE01E880027C37E /* ShotCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,13 +417,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BallabbbleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7421EB65088FF0A53761CD32 /* [CP] Embed Pods Frameworks */ = {
@@ -429,9 +435,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ballabbble/Pods-Ballabbble-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -444,13 +471,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ballabbble-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AEC36F51274745682B694407 /* [CP] Embed Pods Frameworks */ = {
@@ -459,9 +489,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BallabbbleTests/Pods-BallabbbleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -489,6 +524,7 @@
 				371C7C7C1EE02C9A0027C37E /* Moya+Marshal.swift in Sources */,
 				371C7C6D1EE013D30027C37E /* UIStoryboardExtensions.swift in Sources */,
 				371C7C621EE011640027C37E /* ShotsViewController.swift in Sources */,
+				3797A5561F458F2E001A4472 /* SplashViewController.swift in Sources */,
 				8D37841E1EDC9AF400B2006A /* AppDelegate.swift in Sources */,
 				37D6999A1EDFF68F005AE0D8 /* Shot.swift in Sources */,
 				371C7C5E1EE00DDF0027C37E /* User.swift in Sources */,
@@ -515,13 +551,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8D3784211EDC9AF400B2006A /* Main.storyboard */ = {
+		3797A5571F459493001A4472 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8D3784221EDC9AF400B2006A /* Base */,
+				3797A5581F459493001A4472 /* Base */,
 			);
 			name = Main.storyboard;
-			path = .;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8D3784261EDC9AF400B2006A /* LaunchScreen.storyboard */ = {
