@@ -38,6 +38,11 @@ class ShotsViewController: UIViewController {
         return b
     }()
 
+    private lazy var refreshControl: UIRefreshControl = {
+        let r = UIRefreshControl()
+        return r
+    }()
+
     // MARK: - Properties
     private let disposeBag = DisposeBag()
 
@@ -74,6 +79,8 @@ class ShotsViewController: UIViewController {
         }
 
         navigationItem.rightBarButtonItem = refreshBarButtonItem
+
+        collectionView.addSubview(refreshControl)
     }
 
     private func setupCollectionView() {
@@ -86,6 +93,9 @@ class ShotsViewController: UIViewController {
         }
 
         viewModel.shots
+            .do(onNext: { [weak self] _ in
+                self?.refreshControl.endRefreshing()
+            })
             .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: disposeBag)
 
@@ -94,12 +104,12 @@ class ShotsViewController: UIViewController {
     }
 
     private func setupBindings() {
-        refreshBarButtonItem.rx.tap
-            .bind(to: viewModel.reload)
+        Observable.merge(refreshBarButtonItem.rx.tap.asObservable(),
+                         refreshControl.rx.controlEvent(.valueChanged).asObservable())
+            .bind(to: viewModel.refresh)
             .disposed(by: disposeBag)
     }
 }
 
 extension ShotsViewController: UICollectionViewDelegate {
-    
 }

@@ -34,18 +34,15 @@ class ShotsViewModel {
     private let provider: RxMoyaProvider<Dribbble>
 
     private var prevSections: [SectionOfShots] = []
-    // MARK: - Inputs
-
-    // MARK: - Outputs
 
     // MARK: - Lifecycle
     init(provider: RxMoyaProvider<Dribbble> = Provider.sharedDribbble) {
         self.provider = provider
 
-        let _reload = PublishSubject<Void>()
-        self.reload = _reload.asObserver()
+        let _refresh = PublishSubject<Void>()
+        self.refresh = _refresh.asObserver()
 
-        self.shots = _reload
+        self.shots = _refresh
             .flatMap {
                 provider.request(.shots(type: nil))
                     .filterSuccessfulStatusCodes()
@@ -59,9 +56,11 @@ class ShotsViewModel {
 
     // MARK: - Public interface
 
+    // MARK: Inputs
     /// Call to reload repositories.
-    let reload: AnyObserver<Void>
+    let refresh: AnyObserver<Void>
 
+    // MARK: Outputs
     var shots: Observable<[SectionOfShots]>
 
     lazy var dataSource: RxCollectionViewSectionedReloadDataSource<SectionOfShots> = {
