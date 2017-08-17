@@ -7,10 +7,11 @@ target 'Ballabbble' do
     pod 'Moya/RxSwift'
     pod 'Marshal'
 
+    pod 'Cartography'
     pod 'Kingfisher'
 
-	pod 'RxSwift'
-	pod 'RxCocoa'
+#	pod 'RxSwift'
+#	pod 'RxCocoa'
 	pod 'RxDataSources'
 
   	target 'BallabbbleTests' do
