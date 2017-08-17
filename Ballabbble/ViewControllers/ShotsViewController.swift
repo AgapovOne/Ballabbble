@@ -33,6 +33,11 @@ class ShotsViewController: UIViewController {
         return c
     }()
 
+    private lazy var refreshBarButtonItem: UIBarButtonItem = {
+        let b = UIBarButtonItem(title: "Refresh", style: .plain, target: nil, action: nil)
+        return b
+    }()
+
     // MARK: - Properties
     private let disposeBag = DisposeBag()
 
@@ -55,6 +60,8 @@ class ShotsViewController: UIViewController {
         setupUI()
 
         setupCollectionView()
+
+        setupBindings()
     }
 
     private func setupUI() {
@@ -65,6 +72,8 @@ class ShotsViewController: UIViewController {
         constrain(collectionView) { collection in
             collection.edges == collection.superview!.edges
         }
+
+        navigationItem.rightBarButtonItem = refreshBarButtonItem
     }
 
     private func setupCollectionView() {
@@ -77,12 +86,16 @@ class ShotsViewController: UIViewController {
         }
 
         viewModel.shots
-            .drive(collectionView.rx.items(dataSource: viewModel.dataSource))
+            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: disposeBag)
-//            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
-//            .disposed(by: disposeBag)
 
         collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+    }
+
+    private func setupBindings() {
+        refreshBarButtonItem.rx.tap
+            .bind(to: viewModel.reload)
             .disposed(by: disposeBag)
     }
 }
