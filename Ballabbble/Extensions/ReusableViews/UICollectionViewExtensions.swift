@@ -32,7 +32,8 @@ public extension UICollectionView {
   /// - Parameters:
   ///   - _: UICollectionReusableView
   ///   - kind: String describing supplementary view kind
-  public func register<View: UICollectionReusableView>(_: View.Type, forSupplementaryViewElementOfKind kind: UICollectionViewElementKind)
+  public func register<View: UICollectionReusableView>(_: View.Type,
+                       forSupplementaryViewElementOfKind kind: UICollectionViewElementKind)
     where View: ReusableView {
       register(View.self,
                forSupplementaryViewOfKind: kind.type,
@@ -44,7 +45,8 @@ public extension UICollectionView {
   /// - Parameters:
   ///   - _: UICollectionReusableView
   ///   - kind: String describing supplementary view kind
-  public func register<View: UICollectionReusableView>(_: View.Type, forSupplementaryViewElementOfKind kind: UICollectionViewElementKind)
+  public func register<View: UICollectionReusableView>(_: View.Type,
+                       forSupplementaryViewElementOfKind kind: UICollectionViewElementKind)
     where View: ReusableView, View: NibLoadableView {
       let bundle = Bundle(for: View.self)
       let nib = UINib(nibName: View.nibName, bundle: bundle)
@@ -63,7 +65,8 @@ public extension UICollectionView {
   /// - Returns: UICollectionViewCell
   public func dequeueReusableCell<Cell: UICollectionViewCell>(for indexPath: IndexPath) -> Cell
     where Cell: ReusableView {
-      guard let cell = dequeueReusableCell(withReuseIdentifier: Cell.defaultReuseIdentifier, for: indexPath) as? Cell else {
+      guard let cell = dequeueReusableCell(withReuseIdentifier: Cell.defaultReuseIdentifier,
+                                           for: indexPath) as? Cell else {
         fatalError("Could not dequeue cell with identifier: \(Cell.defaultReuseIdentifier)")
       }
 
