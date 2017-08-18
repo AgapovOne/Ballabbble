@@ -14,7 +14,7 @@ class Provider {
 
         guard !TESTING else {
             print("TEST MODE API (with logger & stubs)")
-            return RxMoyaProvider<Dribbble>(stubClosure: MoyaProvider<Dribbble>.immediatelyStub,
+            return RxMoyaProvider<Dribbble>(stubClosure: MoyaProvider<Dribbble>.delayedStub(1),
                                             plugins: [NetworkLoggerPlugin()])
         }
 

@@ -29,7 +29,7 @@ class SplashViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = .red
+        view.backgroundColor = #colorLiteral(red: 0.9382581115, green: 0.8733785748, blue: 0.684623003, alpha: 1)
 
         view.addSubview(stackView)
 

@@ -33,8 +33,6 @@ class ShotsViewModel {
 
     private let provider: RxMoyaProvider<Dribbble>
 
-    private var prevSections: [SectionOfShots] = []
-
     // MARK: - Lifecycle
     init(provider: RxMoyaProvider<Dribbble> = Provider.sharedDribbble) {
         self.provider = provider
@@ -48,10 +46,12 @@ class ShotsViewModel {
                     .filterSuccessfulStatusCodes()
                     .mapArray(of: Shot.self)
                     .catchError { error in
+                        print(error)
                         return Observable.empty()
-                }
+                    }
             }
             .map({ [SectionOfShots(items: $0)] })
+            .asDriver(onErrorJustReturn: [])
     }
 
     // MARK: - Public interface
@@ -61,7 +61,7 @@ class ShotsViewModel {
     let refresh: AnyObserver<Void>
 
     // MARK: Outputs
-    var shots: Observable<[SectionOfShots]>
+    var shots: Driver<[SectionOfShots]>
 
     lazy var dataSource: RxCollectionViewSectionedReloadDataSource<SectionOfShots> = {
         return RxCollectionViewSectionedReloadDataSource<SectionOfShots>()

@@ -8,7 +8,7 @@
 
 import Marshal
 
-struct Image: Unmarshaling {
+struct DribbbleImage: Unmarshaling {
     var hidpi: URL?
     var normal: URL
     var teaser: URL
@@ -25,7 +25,7 @@ struct Shot: Unmarshaling {
     var title: String
     var description: String // Text with html tags
 
-    var image: Image
+    var complexImage: DribbbleImage
 
     var width: Int
     var height: Int
@@ -56,7 +56,7 @@ struct Shot: Unmarshaling {
         title = try object.value(for: "title")
         description = try object.value(for: "description")
 
-        image = try object.value(for: "images")
+        complexImage = try object.value(for: "images")
 
         width = try object.value(for: "width")
         height = try object.value(for: "height")

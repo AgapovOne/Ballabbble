@@ -67,6 +67,8 @@ class ShotsViewController: UIViewController {
         setupCollectionView()
 
         setupBindings()
+
+        refreshControl.sendActions(for: .valueChanged)
     }
 
     private func setupUI() {
@@ -96,7 +98,7 @@ class ShotsViewController: UIViewController {
             .do(onNext: { [weak self] _ in
                 self?.refreshControl.endRefreshing()
             })
-            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
+            .drive(collectionView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: disposeBag)
 
         collectionView.rx.setDelegate(self)
